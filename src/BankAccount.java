@@ -1,4 +1,4 @@
-public class BankAccount {
+public class BankAccount implements Measurable {
     // constructor to initialise zero balance
     private double balance;
 
@@ -28,5 +28,10 @@ public class BankAccount {
     public  void transfer(BankAccount other, double amount) {
         Withdraw(amount);
         other.Deposit(amount);
+    }
+
+    public double getMeasure()
+    {
+        return balance;
     }
 }
